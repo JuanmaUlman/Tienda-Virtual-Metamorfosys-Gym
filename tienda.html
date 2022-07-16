@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Centro de entrenamiento Metamorfosis</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images-proyecto/Logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Anton&family=Bebas+Neue&family=Fira+Sans+Condensed:wght@700&family=Inspiration&family=Kanit:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Anton&family=Bebas+Neue&family=Fira+Sans+Condensed:wght@700&family=Inspiration&family=Kanit:wght@800&family=Noto+Serif:wght@700&family=Roboto:ital,wght@0,900;1,400&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <meta name="description" content="Ponte en contacto con nosotros y nos comunicaremos contigo para despejar tus dudas.">
+    <meta name="keywords" content="contacto, email, telefono, direccion, comunicarse, consulta">
+
+
+</head>
+
+<body>
+    <header class="fondo-header container-fluid">
+        <nav class="row navbar navbar-expand-sm  navbar-dark align-items-end justify-content-center">
+
+               <div class="col-md-2 col-sm-2 col-lg-2 text-center">
+                   <a class="navbar-brand" href="index.html">
+                       <img src="./images-proyecto/Logo.png" alt="Avatar Logo" class="rounded logo-header">
+                   </a>
+               </div>
+
+
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#collapsibleNavbar">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="col-lg-8 col-md-10 col-sm-10 collapse navbar-collapse" id="collapsibleNavbar">
+                   <!-- Links -->
+                   <ul class="navbar-nav texto-menu  <!-- ms-3 -->">
+                       <li class="nav-item ">
+                           <a class="nav-link ms-4 text-white " href="quienessomos.html">QUIENES SOMOS</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link  ms-4  text-white" href="nuestrocentro.html">NUESTRO CENTRO</a>
+                       </li>
+                       <li class="nav-item dropdown">
+                           <a class="nav-link ms-4 dropdown-toggle text-white" href="contenido.html" role="button"
+                               data-bs-toggle="dropdown">CONTENIDO</a>
+                           <ul class="dropdown-menu desplegable mt-2">
+                               <li><a class="dropdown-item py-1" href="contenido.html">Sección Contenidos
+                                   </a></li>
+                               <li><a class="dropdown-item py-1" href="#">Blog de Ejercicios</a></li>
+                               <li><a class="dropdown-item py-1" href="#">Artículos Científicos</a></li>
+                               <li><a class="dropdown-item pt-1 pb-0" href="#">Nuestros Alumnos</a></li>
+                           </ul>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link ms-4  text-white" href="contacto.html">CONTACTO</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link ms-4  text-white" href="contacto.html">TIENDA</a>
+                       </li>
+                   </ul>
+               </div>
+
+           </nav>
+
+
+   </header>
+
+
+
+   <main>
+    <div class="containerfluid bg-light">
+        <div class="row ">
+            <div class="col-lg-12 d-flex justify-content-between">
+                <h3 class="m-4">Tienda virtual</h3> 
+                <div>
+                    <select name="Ordenar:" id="" class="btn btn-primary">
+                        <option value="">Por Defecto</option>;
+                        <option value="" id="deMenor">De Menor a Mayor</option>;
+                        <option value="" id="deMayor">De Mayor a Menor</option>;
+                    </select>
+                    <button id="contadorCarrito" class="btn btn-primary m-4 " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"><img src="./images-proyecto/carrito.png" alt="" width="19px"> Carrito (0)</button> 
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+    <div class="container bg-light">
+        <div class="row d-flex justify-content-center" id="contenedorProductos">  
+         
+
+
+        </div>
+    </div>
+    
+
+      </main>
+
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="carritoContenedor" class="modal-body">
+
+                    </div>
+                    <button id="vaciar" class="btn btn-primary m-1">Vaciar carrito de compras</button>
+                    <button id="comprar" class="btn btn-danger m-1">Comprar</button>
+                    <div class="modal-footer">
+                        <p>Total en carrito: <span id="total">0</span></p>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer id="footer">
+        <div class="container-fluid mh-100 ">
+            <div class="row footer">
+
+                    <div class="col-lg-3 col-md-12 col-sm-12  mx-auto">
+                        <div id="logoyfrasefooter">
+                            <div class="imagen-footer-contenedor rounded-circle">
+                                <img src="./images-proyecto/Logo.png" alt="Logo">
+                            </div>
+                            <p>Es más valioso un gramo de acción, <br> que una tonelada de intención. Busca tu mejor
+                                versión
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 mx-auto d-flex justify-content-center">
+                        <ul id="iconosfooter">
+                            <li>
+                                <p><img src="./images-proyecto/email-transparente-blanco.png" class="pe-2"
+                                        alt="correoelectronico" width="24" height="24"></p>
+                                <p class="pe-2"><a href="#" class="text-muted">CentroMetamorfosis.gmail.com</a></p>
+                            </li>
+
+                            <li>
+                                <p><img src="./images-proyecto/telefono-transparente-blanco.png" class="pe-2"
+                                        alt="telefono" width="24" height="24"></p>
+                                <p class="pe-2"><a href="#" class="text-muted">343-47569645</a> </p>
+                            </li>
+
+                            <li>
+                                <p><img src="./images-proyecto/ubicacion-transparente-blanco.png" class="pe-2"
+                                        alt="ubicacion" width="24" height="24"></p>
+                                <p class="pe-2"><a href="#" class="text-muted">Enrique Carbo 1705</a></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div
+                        class="col-lg-3 col-md-12 col-sm-12 contenedor-redes d-flex align-items-center d-flex justify-content-center">
+                        <div class="redes-footer text-center d-flex justify-content-center flex-column ">
+                            
+                                <p style="padding-left: 0px">SEGUINOS</p>
+                            
+
+                                <ul class="lista-footer d-flex align-items-center d-flex justify-content-center" style="padding-left: 0px">
+                                    <li>
+                                        <a href="https://www.facebook.com" target="_blank"><img
+                                                src="./images-proyecto/facebook-blanco.png" width="20" height="20"
+                                                alt="facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank"><img
+                                                src="./images-proyecto/instagram-transparente.png" class="ms-2"
+                                                width="20" height="20" alt="instagram"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" target="_blank"><img
+                                                src="./images-proyecto/youtube-blanco.png" class="ms-2" width="20"
+                                                height="20" alt="instagram"></a>
+                                    </li>
+                                </ul>
+
+
+                        </div>
+                    </div>
+
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="stock.js"></script> -->
+    <script src="./js-tienda/getData.js" type="module"></script>
+    <script src="./js-tienda/tienda.js" type="module"></script>
+    <script src="pasarelaDePago.js" type="module"></script>
+    <!-- <script src="./js-tienda/appM.js"></script> -->
+</body>
+
+</html>

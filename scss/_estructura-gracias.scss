@@ -1,0 +1,64 @@
+            /* PAGINA GRACIAS, A LA CUAL SE ACCEDE PRESIONANDO ENVIAR EN LA PAGINA CONTACTO */
+
+                                            /* VERSION DESKTOP */
+
+@media (min-width:500px){
+    .fondogracias{
+        background-image: url(../images-proyecto/fondo-gracias-redimensionado.jpg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: raleway,sans-serif;
+        font-size: 25px;
+        color: rgb(220, 220, 220);
+        width: 100%;
+        border-radius: 15px;
+        letter-spacing: 4px;        
+    }
+    
+    .fondogracias p a{
+        display: flex;
+        text-decoration: none;
+        background: black;
+        color: #fff;
+        border-radius: 40%;
+        padding: 10px;
+    }
+    
+    .fondogracias img{
+        width: 30%;
+    }
+}
+    
+                                                /* VERSION MOBILE */
+    
+@media (max-width:500px){
+    .fondogracias{
+        background-image: url(../images-proyecto/fondo-gracias-redimensionado.jpg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: raleway,sans-serif;
+        font-size: 17px;
+        color: rgb(220, 220, 220);
+        width: 100%;
+        border-radius: 15px;
+        letter-spacing: 4px; 
+        text-align: center;       
+    }
+    
+    .fondogracias p a{
+        display: flex;
+        text-decoration: none;
+        background: black;
+        color: #fff;
+        border-radius: 40%;
+        padding: 10px;
+    }
+    
+    .fondogracias img{
+        width: 40%;
+    }
+}

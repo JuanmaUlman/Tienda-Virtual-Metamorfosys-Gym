@@ -1,0 +1,33 @@
+.texto-menu{
+    color: rgb(255, 255, 255); 
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 26px;
+    
+}
+
+@media (min-width: 773px) and (max-width: 992px){
+    .texto-menu{
+        color: rgb(255, 255, 255); 
+        font-family: 'Fira Sans Condensed', sans-serif;
+        font-size: 16.7px;
+    }
+}
+
+@media  (max-width: 772px){
+    .texto-menu{
+        color: rgb(255, 255, 255); 
+        font-family: 'Fira Sans Condensed', sans-serif;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .texto-menu{
+        color: rgb(255, 255, 255); 
+        font-family: 'Fira Sans Condensed', sans-serif;
+        font-size: 10px;
+    }
+}
+
+
+

@@ -1,0 +1,33 @@
+$color-rojo: #ba0303;
+$color-parrafo: #b0b0b0;
+$fuente-parrafo: raleway,sans-serif;
+$justificado: justify;
+
+
+/* MAP */
+$contenido:(
+    Blog: #090909,
+    Articulos: $color-rojo,
+    Alumnos: #6464648d
+    );
+
+/* Mixin, en parrafo de pagina quienes somos */
+@mixin texto {
+    color: $color-parrafo;
+    font-weight: bold;
+    font-family: $fuente-parrafo;
+    text-align: $justificado;        
+    font-size: 15px;
+}
+
+@mixin titulo{
+        font-family:'Noto Serif', serif;
+        font-weight: bold;
+        text-shadow: #0000004d 0px 5px 0px;
+        z-index: 1000;
+    }
+
+@mixin subtitulo{
+    text-shadow: #0000004d 0px 5px 0px; 
+    letter-spacing: 5px;
+}

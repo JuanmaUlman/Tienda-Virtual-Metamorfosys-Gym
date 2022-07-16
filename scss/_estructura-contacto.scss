@@ -1,0 +1,286 @@
+
+        
+                                    /* DISEÑO DESKTOP */
+
+@media  (min-width: 480px){
+    #gridcontainer-contacto{
+        background-image: url(../images-proyecto/fondocontacto.png);
+        display: grid;
+        grid-template-columns: 50% 50% ;
+        grid-template-areas: 
+        "texto logocont"
+        "whatsapp logocont"
+        "formulario logocont";
+        grid-gap: 1rem;
+    }
+    
+/* CONTENEDOR DEL TEXTO DE CONTACTO */
+    .contenedorcontacto{
+        display: grid;
+        grid-area: texto;
+        width: 100%;
+        font-family: raleway,sans-serif;
+        text-align: justify;
+        border-radius: 10px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .contenedorcontacto h2{
+        font-family: 'Rubik', sans-serif;
+        font-size: 30px;
+        color: #fff;
+        margin-left: 2%;
+        margin-bottom: 1%;
+    }
+    
+    .contenedorcontacto p{
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-left: 1%;
+    }
+    
+/* CONTENEDOR DEL LOGO UBICADO A LA DERECHA */
+    .logocontacto{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-area: logocont;
+        width: 80%;
+        background: #fff;
+        padding: 50px;
+        border: 3px solid black;
+    }
+    
+    
+/* CONTENEDOR DEL FORMULARIO UBICADO ABAJO A LA IZQUIERDA */
+    .formulario{
+        grid-area: formulario;
+        width: 100%;
+        border-radius: 20px;
+            form{
+                p{
+                    input{
+                        width: 290px;
+                        height: 30px;
+                        border: solid 2px $color-rojo;
+                        padding: 3px;
+                        margin-bottom: 4px;
+                        background: rgba(68, 68, 68, 0.842);
+                        font-size: 15px;
+                        font-family:fantasy;
+                        color: #fff;
+                    } 
+                    textarea{
+                        width: 400px;
+                        border: solid 2px $color-rojo;
+                        background: transparent; 
+                        font-size: 15px;
+                        font-family: fantasy;
+                        background: rgba(68, 68, 68, 0.842);
+                        border-radius: 10px;
+                        color: #fff;
+                    }
+                } 
+            } 
+    }
+    
+
+    #enviar{
+        display: grid;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        border: none;
+        margin-bottom: 2rem;
+            p{
+                input{
+                    border: none;
+                    background: $color-rojo;
+                    color: #fff;
+                    font-size: 15px;
+                    font-family:fantasy;
+                    padding-bottom: 23px;
+                }    
+            } 
+    }
+    
+
+/*     CONTENEDOR DEL FORMULARIO DE WHATSAP */
+
+    .whatsapp{
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        width: 45px;
+    } 
+}
+
+
+
+
+                                            /*DISEÑO MOBILE*/
+@media (min-width: 773px) and (max-width: 992px){
+
+.formulario{
+    grid-area: formulario;
+    width: 100%;
+    border-radius: 20px;
+        form{
+            p{
+                input{
+                    width: 100%;
+                    height: 30px;
+                    margin-bottom: 10px;
+                    border: solid 2px $color-rojo;
+                    padding: 3px;
+                    background: rgba(68, 68, 68, 0.842);
+                    font-size: 15px;
+                    font-family:fantasy;
+                    color: #fff;
+                } 
+                textarea{
+                    width: 100%;
+                    border: solid 2px $color-rojo;
+                    background: transparent; 
+                    font-size: 15px;
+                    font-family:fantasy;
+                    background: rgba(68, 68, 68, 0.842);
+                    border-radius: 10px;
+                    color: #fff;
+                }
+            } 
+        } 
+        #enviar{
+            display: grid;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            border: none;
+            margin-bottom: 2rem;
+                p{
+                    input{
+                        border: none;
+                        background: $color-rojo;
+                        color: #fff;
+                        font-size: 15px;
+                        font-family:fantasy;
+                        padding-bottom: 23px;
+                        width: 150px;
+                    }
+                }
+        }
+}
+
+.whatsapp{
+    position: fixed;
+    right: 10px;
+    bottom: 300px;
+    width: 45px;
+} 
+}
+
+@media  (max-width: 480px){
+#gridcontainer-contacto{
+        background-image: url(../images-proyecto/fondocontacto.png);
+}
+/*     CONTENEDOR DEL TEXTO DE CONTACTO */
+    .contenedorcontacto{
+        font-family: raleway,sans-serif;
+        text-align: justify;
+        border-radius: 10px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+            h2{
+                font-family: 'Rubik', sans-serif;
+                font-size: 30px;
+                color: #fff;
+                margin-left: 0%;
+                margin-bottom: 1%;
+            }
+            p{
+                color: #fff;
+                font-size: 14px;
+                letter-spacing: 2px;
+                margin-left: 1%;
+            }
+    }
+
+
+
+/* CONTENEDOR DEL LOGO UBICADO A LA DERECHA */
+.logocontacto{
+    background: #fff;
+    padding: 50px;
+    border: 3px solid black;
+    }
+
+
+
+/* CONTENEDOR DEL FORMULARIO UBICADO ABAJO A LA IZQUIERDA */
+.formulario{
+    grid-area: formulario;
+    width: 90%;
+        form{
+            p{
+                input{
+                    width: 100%;
+                    height: 30px;
+                    border: solid 2px $color-rojo;
+                    padding: 3px;
+                    margin-bottom: 10px;
+                    background: transparent;
+                    font-size: 15px;
+                    font-family:fantasy;
+                    background: rgba(68, 68, 68, 0.842);
+                    color: #fff;
+                }
+                textarea{
+                    width: 100%;
+                    border: solid 2px $color-rojo;
+                    background: transparent; 
+                    font-size: 15px;
+                    font-family:fantasy;
+                    background: rgba(68, 68, 68, 0.842);
+                    color: #fff;
+                    border-radius: 10px;
+                }
+            } 
+        } 
+}
+
+
+
+    #enviar{
+        display: grid;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        border: none;
+        margin-bottom: 2rem;
+            p{
+                input{
+                    border: none;
+                    background: $color-rojo;
+                    color: #fff;
+                    font-size: 15px;
+                    font-family:fantasy;
+                    padding-bottom: 23px;
+                    width: 150px;
+                }
+            }
+    }
+
+
+
+
+
+/*CONTENEDOR DEL FORMULARIO DE WHATSAP */
+.whatsapp{
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    width: 40px;
+} 
+}

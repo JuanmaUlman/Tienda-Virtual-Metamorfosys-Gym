@@ -1,0 +1,549 @@
+
+
+
+                                        /* DISEÑO DESKTOP */
+
+@media (min-width: 480px){
+
+                                /* MENU DEL HEADER */
+.menu-header{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.fondo-header{
+    background-image: url(../images-proyecto/fondorojo.jpg)
+}
+
+.logo-header{
+    background-color: rgba(210, 210, 210, 0.276);
+    width: 140px;
+}
+
+.desplegable{
+        li{
+            a{
+                text-transform: uppercase;
+                font-size: 20px;
+                &:hover{
+                    background-image: url(../images-proyecto/fondorojodesplegable-redimensionado.jpg);
+                    color:#fff
+                }
+            }
+        }
+}
+
+
+
+
+
+                                            /* MAIN */
+    
+.contenedor-main{
+    background-image: url(../images-proyecto/imagendefondopesarusareducida.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    justify-content: center;
+    align-content:space-between;
+}
+
+/*PRIMER H2 UBICADO EN LA PARTE SUPERIOR DEL MAIN INDEX*/
+
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animacion{
+    animation-duration: 5s;
+    animation-name: aparecer;
+    animation-delay: 5sg;
+}
+
+.titulo{
+    font-family:'Noto Serif', serif;
+    font-weight: bold;
+    text-shadow: #0000004d 0px 5px 0px;
+    z-index: 1000;
+    font-size: 5rem;
+}
+
+.textoprincipal{
+    padding-top: 0rem;
+    background: rgb(205,1,1);
+    background: radial-gradient(circle, rgba(205,1,1,1) 57%, #c1c2be 100%);
+    width: 100%;
+    font-family:'Noto Serif', serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+
+.subtitulo{
+    font-size: 22px;
+    text-shadow: #0000004d 0px 5px 0px; 
+    letter-spacing: 5px;
+}
+
+
+
+/* BOTON PROBA TU CALSE GRATUITA */
+
+.inputdeclase{
+    padding-bottom: 2rem;
+}
+
+.contenedortitulo{
+    height: 75vh;
+}
+
+
+
+
+                                            /* FOOTER */
+
+#footer{
+    border-top: 3px solid rgb(45, 45, 45);
+    background: rgb(8, 8, 8);
+}
+
+.footer{
+    background: rgb(8, 8, 8);
+}
+    
+    /* ICONOS DE EMAIL, TELEFONO Y UBICACION UBICADO EN LA PARTE CENTRAL DEL FOOTER */
+    
+    #iconosfooter{
+        list-style: none;
+        height: 100%;
+            li{
+                display: flex;
+                align-items:center;
+                    p{
+                        a{
+                        text-decoration: none;
+                        font-family: 'Noto Serif', serif; 
+                        font-size: 14px;
+                        color: #fff;
+                        }
+                    }
+            }
+    }
+    
+
+/* LOGO Y TEXTO UBICADO EN LA PARTE DERECHA DEL FOOTER */
+
+#logoyfrasefooter{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(66, 65, 65, 0);
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 13px;
+        p{
+        font-family: 'Roboto', sans-serif;
+        }
+        img{
+            width: 100px;
+        }
+}
+
+.imagen-footer-contenedor{
+            padding: 20px;
+            background-color: #fff;
+            border: solid 3px black
+}
+
+
+    
+    #iconosfooter{
+        display: flex;
+        flex-direction: row;
+            li{
+                img{
+                    width: 30px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+    }
+
+
+
+/*     Redes-footer */
+.redes-footer{
+    p{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline;
+    letter-spacing: 2px;
+    padding-left: 32px;
+    }
+    ul{
+        display: flex;
+        justify-items: center;
+            li{
+                display: inline-block;
+                text-decoration: none;
+                list-style: none;
+                padding: 4px;
+                    a{
+                        width: auto;
+                        display: flex;
+                        flex-direction: row;
+                    }
+            }
+    }
+
+}
+}
+
+
+
+                                        /* DISEÑO MOBILE */
+
+/* Titulo central del index, en sus diferentes tamaños responsive */
+@media (min-width: 773px) and (max-width: 992px){
+    .titulo{
+        @include titulo;
+        font-size: 50px;
+    }
+    .subtitulo{
+        @include subtitulo;
+        font-size: 16px;
+    }
+
+    .logo-header{
+        background-color: rgba(210, 210, 210, 0.276);
+        width: 100%;
+    }
+    .desplegable{
+        li{
+            a{
+                text-transform: uppercase;
+                font-size: 16.7px;
+                &:hover{
+                    background-image: url(../images-proyecto/fondorojodesplegable-redimensionado.jpg);
+                    color:#fff
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1180px){
+    #logoyfrasefooter{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #iconosfooter{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .redes-footer{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+    .logo-header{
+        background-color: rgba(210, 210, 210, 0.276);
+        width: 100%;
+    }
+
+    .desplegable{
+        li{
+            a{
+                text-transform: uppercase;
+                font-size: 10px;
+                &:hover{
+                    background-image: url(../images-proyecto/fondorojodesplegable-redimensionado.jpg);
+                    color:#fff
+                }
+            }
+        }
+    }
+    #iconosfooter{
+            li{
+                p{
+                    a{
+                        font-size: 8px;
+                    }
+                }
+                img{
+                    width: 30px;
+                }
+        }
+    }
+    #logoyfrasefooter{
+        font-size: 9px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+            img{
+                width: 70px;
+            }
+    }
+    .redes-footer{
+        padding-top: 15px;
+        padding-bottom: 15px;
+            p{
+                font-size: 14px;
+        }
+    }
+    
+}
+
+@media (min-width: 501px) and (max-width: 772px){
+    .titulo{
+        @include titulo;
+        font-size: 40px;
+    }
+    .subtitulo{
+        @include subtitulo;
+        font-size: 8px;
+    }
+
+
+}
+
+
+@media  (max-width: 479x){
+    .lista-footer{
+        padding-right: 30px;
+    }
+
+}
+
+@media (min-width: 423px) and (max-width: 500px){
+.titulo{
+    @include titulo;
+    font-size: 28px;
+}
+.subtitulo{
+    @include subtitulo;
+    font-size: 16px;
+}
+}
+
+@media (max-width: 422px){
+    .titulo{
+        @include titulo;
+        font-size: 28px;
+    }
+    .subtitulo{
+            @include subtitulo;
+            font-size: 14px;
+            font-weight: bold;
+    }
+
+}
+
+    @media (max-width: 367px){
+        .titulo{
+            @include titulo;
+            font-size: 24px;
+        }
+}
+
+    
+    @media (max-width: 500px){
+/* MENU DEL HEADER */
+.menu-header{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.fondo-header{
+    background-image: url(../images-proyecto/fondorojo.jpg)
+}
+
+.logo-header{
+    background-color: rgba(210, 210, 210, 0.276);
+    width: 140px;
+}
+
+.desplegable{
+    li{
+        a{
+            text-transform: uppercase;
+            &:hover{
+                background-image: url(../images-proyecto/fondorojodesplegable-redimensionado.jpg);
+                color:#fff
+            }
+        }
+    }
+}
+
+                                            /* MAIN */
+    
+.contenedor-main{
+    background-image: url(../images-proyecto/fondo-index-mobile-redimensionado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    justify-content: center;
+    align-content:space-between;
+    grid-area: main;
+}
+
+/*PRIMER H2 UBICADO EN LA PARTE SUPERIOR DEL MAIN INDEX*/
+
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animacion{
+    animation-duration: 5s;
+    animation-name: aparecer;
+    animation-delay: 1sg;
+}
+
+.textoprincipal{
+    padding-top: 0rem;
+    background: rgb(205,1,1);
+    background: radial-gradient(circle, rgba(205,1,1,1) 57%, #c1c2be 100%);
+    width: 100%;
+    font-family:'Noto Serif', serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+
+/* BOTON UBICADO EN LA PARTE INFERIOR DEL MAIN INDEX*/
+
+.inputdeclase{
+    padding-bottom: 2rem;
+}
+
+.contenedortitulo{
+    height: 75vh;
+}
+
+
+
+
+                                                /* FOOTER */
+    
+#footer{
+    border-top: 3px solid rgb(45, 45, 45);
+    justify-items: center;
+    grid-area: footer;
+    width: 100%;
+    background: rgb(12, 12, 12);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+/* ICONOS DE EMAIL, TELEFONO Y UBICACION UBICADO EN LA PARTE CENTRAL DEL FOOTER */
+
+#iconosfooter{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    list-style: none;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+        li{
+            display: flex;
+            align-items:center;
+            p{
+                a{
+                    text-decoration: none;
+                    font-family: 'Noto Serif', serif; 
+                    font-size: 9px;
+                    color: #fff;
+                }
+            }
+            img{
+                width: 30px;
+            }
+    }
+}
+
+
+/* LOGO Y TEXTO UBICADO EN LA PARTE DERECHA DEL FOOTER */
+
+#logoyfrasefooter{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: #fff;
+
+    font-size: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+        p{
+            font-family: 'Roboto', sans-serif;
+        }
+        img{
+            width: 80px;
+        }
+}
+
+
+.imagen-footer-contenedor{
+padding: 20px;
+background-color: #fff;
+border: solid 3px black;
+}
+
+
+
+
+/*     Redes-footer */
+.redes-footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+        p{
+            display: flex;
+            justify-content: center;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: underline;
+        letter-spacing: 2px;
+
+    }
+        ul{
+                li{
+                    display: inline-block;
+                    text-decoration: none;
+                    list-style: none;
+                    padding: 4px;
+                    a{
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+
+
+}
+
