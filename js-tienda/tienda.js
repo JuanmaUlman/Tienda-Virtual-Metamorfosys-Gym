@@ -40,7 +40,14 @@ const mostrarProductos = async () => {
 
         contenedorProductos.appendChild(div)
        
-        
+        const ordenar = document.getElementById("ordenar");
+        ordenar.addEventListener('change', (e) => {
+        productos.sort((a, b) => b.precio - a.precio )
+        console.log(productos.sort((a, b) => b.precio - a.precio )
+        )
+        })
+
+
         
 
         //BOTON AGREGAR AL CARRITO CON EVENTO CLICK
@@ -74,21 +81,21 @@ export let carrito = [];
 
 
 //aqui le damos el evento click al boton del modal que sirve para vaciar los productos en el carrito, una vez echo el click se llama a la funcion actualizarCarrito()
-vaciar.addEventListener("click", () =>{
-    carrito.length = 0
-    total.innerText = 0
-    actualizarCarrito();
-} )
+// vaciar.addEventListener("click", () =>{
+//     carrito.length = 0
+//     total.innerText = 0
+//     actualizarCarrito();
+// } )
 
 
 
 //Boton comprar en el modal, que me redirecciona a otro html
-const botonComprar = document.getElementById("comprar");
+// const botonComprar = document.getElementById("comprar");
 
-botonComprar.addEventListener("click", () => {
+// botonComprar.addEventListener("click", () => {
 
-    location.replace('http://127.0.0.1:5500/pasarelaDePago.html')
-})
+//     location.replace('http://127.0.0.1:5500/pasarelaDePago.html')
+// })
 
 
 
@@ -208,13 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 })
-
-
-// const deMenor = document.getElementById("deMenor");
-//         deMenor.addEventListener('click', (e) => {
-//             console.log(e,'here');
-//         productos.sort((a, b) => b.precio < a.precio)
-//         })
 
 
 
