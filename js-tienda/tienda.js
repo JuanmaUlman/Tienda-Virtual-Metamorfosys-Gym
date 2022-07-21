@@ -207,30 +207,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
 })
 
-    //Evento que filtra y ordena el dom segun se lo indique (de menor a mayor o viceversa, segun el precio)
-    const ordenar = document.getElementById("ordenar");
-    ordenar.addEventListener('change', (e) => {
-        switch(e.target.value){
-            case "menor":
-                console.log("menor a mayor");
-                productos.sort((a, b) => a.precio - b.precio );
-                break;
-            case "mayor":
-                console.log("mayor a menor");
-                productos.sort((a, b) => b.precio - a.precio );
-                break;
-                default:
-                    console.log("orden por default");
-                    break;
-        }
-    mostrarProductos();
-    })
+//     //Evento que filtra y ordena el dom segun se lo indique (de menor a mayor o viceversa, segun el precio)
+//     const ordenar = document.getElementById("ordenar");
+//     ordenar.addEventListener('change', (e) => {
+//         switch(e.target.value){
+//             case "menor":
+//                 console.log("menor a mayor");
+//                 productos.sort((a, b) => a.precio - b.precio );
+//                 break;
+//             case "mayor":
+//                 console.log("mayor a menor");
+//                 productos.sort((a, b) => b.precio - a.precio );
+//                 break;
+//                 default:
+//                     console.log("orden por default");
+//                     break;
+//         }
+//     mostrarProductos();
+//     })
 
 
 
 
-vaciar.addEventListener("click", () =>{
-    carrito.length = 0
-    total.innerText = 0
-    actualizarCarrito();
-} )
+// vaciar.addEventListener("click", () =>{
+//     carrito.length = 0
+//     total.innerText = 0
+//     actualizarCarrito();
+// } )
