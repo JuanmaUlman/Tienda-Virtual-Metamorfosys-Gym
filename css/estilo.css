@@ -996,3 +996,12 @@
   .divCard{
     width: 5rem;
   }
+
+  .btn-comprar{
+    color: white;
+    text-decoration: none;
+  }
+
+  .btn-comprar:hover{
+    color: white;
+  }

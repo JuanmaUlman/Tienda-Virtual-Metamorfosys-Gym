@@ -40,12 +40,8 @@ const mostrarProductos = async () => {
 
         contenedorProductos.appendChild(div)
        
-        const ordenar = document.getElementById("ordenar");
-        ordenar.addEventListener('change', (e) => {
-        productos.sort((a, b) => b.precio - a.precio )
-        console.log(productos.sort((a, b) => b.precio - a.precio )
-        )
-        })
+
+
 
 
         
@@ -66,6 +62,7 @@ const mostrarProductos = async () => {
             }
         }).showToast();
         });
+
     })
 
 }
@@ -75,17 +72,12 @@ const mostrarProductos = async () => {
 mostrarProductos();
 
 
-
 //CARGAR PRODUCTOS AL CARRITO
 export let carrito = [];
 
 
-//aqui le damos el evento click al boton del modal que sirve para vaciar los productos en el carrito, una vez echo el click se llama a la funcion actualizarCarrito()
-// vaciar.addEventListener("click", () =>{
-//     carrito.length = 0
-//     total.innerText = 0
-//     actualizarCarrito();
-// } )
+// aqui le damos el evento click al boton del modal que sirve para vaciar los productos en el carrito, una vez echo el click se llama a la funcion actualizarCarrito()
+
 
 
 
@@ -116,10 +108,10 @@ if(yaFueAgregado){
         const item = productos.find((prod) => prod.id === prodId)  
         carrito.push(item);
 }
+
 actualizarCarrito();
     
 }
-
 
 
 
@@ -130,7 +122,6 @@ const eliminarDelCarrito= (prodId) => {
     const indiceDelItem = carrito.indexOf(item)
     carrito.splice(indiceDelItem, 1)
     actualizarCarrito();
-    
 }
 
 
@@ -216,5 +207,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
 })
 
+    //Evento que filtra y ordena el dom segun se lo indique (de menor a mayor o viceversa, segun el precio)
+    const ordenar = document.getElementById("ordenar");
+    ordenar.addEventListener('change', (e) => {
+        switch(e.target.value){
+            case "menor":
+                console.log("menor a mayor");
+                productos.sort((a, b) => a.precio - b.precio );
+                break;
+            case "mayor":
+                console.log("mayor a menor");
+                productos.sort((a, b) => b.precio - a.precio );
+                break;
+                default:
+                    console.log("orden por default");
+                    break;
+        }
+    mostrarProductos();
+    })
 
 
+
+
+vaciar.addEventListener("click", () =>{
+    carrito.length = 0
+    total.innerText = 0
+    actualizarCarrito();
+} )
