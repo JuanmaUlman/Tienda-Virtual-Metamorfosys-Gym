@@ -52,7 +52,7 @@ const pintarResumen = () => {
 
   envio.textContent = "$"+calcularEnvio;
   totalAPagar.textContent = `$` + ( carritoSubTotal + calcularEnvio);
-  cuotas.textContent = +cantidadCuotas.value+ " X " +"$"+ (carritoSubTotal + calcularEnvio) / +cantidadCuotas.value;
+  cuotas.textContent = +cantidadCuotas.value+ " X " +"$"+ ((carritoSubTotal + calcularEnvio) / +cantidadCuotas.value).toFixed(2);
   // console.log({ carritoSubTotal, productosCantidad });
   // debugger;
 
