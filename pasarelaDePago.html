@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/estilo.css">
-    <title>Completa tu Pago</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilo.css">
+
+  <title>Completa tu Pago</title>
 </head>
+
 <body class="bg-light">
 
 
-      
-<div class="container">
+
+  <div class="container">
     <main>
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="./images-proyecto/Logo.png" alt="" width="72" height="57">
         <h2>Pago Online</h2>
         <p class="lead">Completa tu pago</p>
       </div>
-  
+
       <div class="row g-5">
         <div class="col-md-5 col-lg-4 order-md-last">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -54,7 +57,7 @@
               <span>Total a pagar</span>
               <strong id="totalAPagar">$0</strong>
             </li>
-             <button class="w-100 btn btn-success btn-lg mb-5 "><a href="./public/gracias.html" class="btn-comprar">Comprar</a> </button> 
+            <button class="w-100 btn btn-success btn-lg mb-5 boton-pagar" id="btn-pagar"><a href="./public/gracias.html" class="btn-comprar">Pagar</a> </button>
 
           </ul>
 
@@ -64,32 +67,34 @@
         </div>
         <div class="col-md-7 col-lg-8">
           <h4 class="mb-3">Ingrese los datos para tu pago</h4>
-          <form class="needs-validation" id="form" novalidate>
+          <form action="" id="form" class="formulario">
             <div class="row g-3">
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Debe ingresar un nombre
-              </div>
-            </div>
-  
-              <div class="col-sm-6">
-                <label for="lastName" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Debe ingresar un apellido
+
+              <div class="col-sm-6 formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="form-label formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control formulario__input" name="nombre" id="nombre" placeholder="" value="" >
+                  <i class="formulario__validacion-estado fas fa-times-circle d-flex justify-content-end mt-2"></i>
                 </div>
               </div>
-  
-              <div class="col-12">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-                <div class="invalid-feedback">
-                  Ingrese una dirección de correo electrónico válida para actualizaciones de envío.
+              
+              <div class="col-sm-6 formulario__grupo" id="grupo__apellido">
+                <label for="apellido" class="form-label formulario__label">Apellido</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="form-control formulario__input" name="apellido" id="nombre" placeholder="" value="" >
+                  <i class="formulario__validacion-estado fas fa-times-circle d-flex justify-content-end mt-2"></i>
                 </div>
               </div>
-  
+
+
+              <div class="col-12 formulario__grupo" id="grupo__email">
+                <div class="formulario__grupo-input">
+                <label for="email" class="form-label formulario__label">Email</label>
+                <input type="email" class="form-control formulario__input" name="email" id="email">
+                <i class="formulario__validacion-estado fas fa-times-circle d-flex justify-content-end mt-2"></i>
+                </div>
+              </div>
+
               <div class="col-12">
                 <select name="Tipo-de-envio" id="envio" class="btn btn-primary">
                   <option value="">Envio a Domicilio</option>
@@ -100,12 +105,12 @@
 
 
 
-              <div class="col-12">
-                <label for="text" class="form-label">Direccion</label>
-                <input type="text" class="form-control" id="">
-                <div class="invalid-feedback">
-
-                </div>
+              <div class="col-12 formulario__grupo" id="grupo__direccion">
+                <div class="formulario__grupo-input">
+                <label for="direccion" class="form-label formulario__label">Direccion</label>
+                <input type="text" class="form-control formulario__input" name="direccion" id="direccion">
+                <i class="formulario__validacion-estado fas fa-times-circle d-flex justify-content-end mt-2"></i>
+              </div>
               </div>
 
 
@@ -117,33 +122,41 @@
                   <option value="">Transferencia bancaria</option>
                 </select>
               </div>
-  
+
               <div class="col-12">
                 <label for="cantidadCuotas" class="form-label">¿En cuantas cuotas?</label>
-                <input type="number" class="form-control" id="cantidadCuotas" placeholder="12" min="1" max="6" required>
+                <input type="number" class="form-control" name="cuotas" id="cantidadCuotas" placeholder="12" min="1"
+                  max="6">
                 <div class="invalid-feedback">
                   Debe ingresar en cuantos pagos quiere hacer la compra
                 </div>
               </div>
-  
-            <hr class="my-4">
-  
 
-  
-            <hr class="my-4">
-  
-            <input class="w-100 btn btn-primary btn-lg mb-5" id="simulate" type="submit" value="Listo">
+              <hr class="my-4">
+
+
+
+              <hr class="my-4">
+            </div>
+            <button type="submit" class="w-100 btn btn-primary btn-lg mb-5">Listo</button>
+
+              <!-- <input class="w-100 btn btn-primary btn-lg mb-5" id="simulate" type="submit" value="Listo"> -->
           </form>
         </div>
       </div>
+    </main>
+  </div>
+      
 
 
 
-<script src="./js-tienda/tienda.js" type="module"></script>
 
-<script src="./js-tienda/pasarelaDePago.js" type="module"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+
+      <script src="./js-tienda/pasarelaDePago.js" type="module"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 
 </body>
+
 </html>

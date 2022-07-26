@@ -7,7 +7,7 @@ const contadorCarrito = document.getElementById("contadorCarrito");
 const vaciar = document.getElementById("vaciar");
 export const total = document.getElementById("total");
 
-// const deMayor = document.getElementById("deMayor");
+
 
 
 
@@ -76,18 +76,9 @@ mostrarProductos();
 export let carrito = [];
 
 
-// aqui le damos el evento click al boton del modal que sirve para vaciar los productos en el carrito, una vez echo el click se llama a la funcion actualizarCarrito()
 
 
 
-
-//Boton comprar en el modal, que me redirecciona a otro html
-// const botonComprar = document.getElementById("comprar");
-
-// botonComprar.addEventListener("click", () => {
-
-//     location.replace('http://127.0.0.1:5500/pasarelaDePago.html')
-// })
 
 
 
@@ -207,30 +198,34 @@ document.addEventListener('DOMContentLoaded', () => {
     
 })
 
-//     //Evento que filtra y ordena el dom segun se lo indique (de menor a mayor o viceversa, segun el precio)
-//     const ordenar = document.getElementById("ordenar");
-//     ordenar.addEventListener('change', (e) => {
-//         switch(e.target.value){
-//             case "menor":
-//                 console.log("menor a mayor");
-//                 productos.sort((a, b) => a.precio - b.precio );
-//                 break;
-//             case "mayor":
-//                 console.log("mayor a menor");
-//                 productos.sort((a, b) => b.precio - a.precio );
-//                 break;
-//                 default:
-//                     console.log("orden por default");
-//                     break;
-//         }
-//     mostrarProductos();
-//     })
+//     Evento que filtra y ordena el dom segun se lo indique (de menor a mayor o viceversa, segun el precio)
+    const ordenar = document.getElementById("ordenar");
+    ordenar.addEventListener('change', (e) => {
+        e.preventDefault();
+        switch(e.target.value){
+            
+            case "menor":
+                console.log("menor a mayor");
+                productos.sort((a, b) => a.precio - b.precio );
+                break;
+            case "mayor":
+                console.log("mayor a menor");
+                productos.sort((a, b) => b.precio - a.precio );
+                break;
+                default:
+                    console.log("orden por default");
+                    break;
+        }
+    mostrarProductos();
+    })
 
 
 
+// aqui le damos el evento click al boton del modal que sirve para vaciar los productos en el carrito, una vez echo el click se llama a la funcion actualizarCarrito()
+vaciar.addEventListener("click", (e) =>{
 
-// vaciar.addEventListener("click", () =>{
-//     carrito.length = 0
-//     total.innerText = 0
-//     actualizarCarrito();
-// } )
+    carrito.length = 0
+    total.innerText = 0
+    actualizarCarrito();
+    e.preventDefault();
+} )
