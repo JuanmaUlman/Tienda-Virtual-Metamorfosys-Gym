@@ -987,15 +987,144 @@
       display: flex;
       justify-content: space-between;
   }
+
+  .productoEnCarrito > button{
+    border: none;
+    width: 50px;
+    background-color: transparent;
+    height: 40px;
+  }
+  .productoEnCarrito > button > i{
+    height: 40px;
+    width: 40px;
+  }
+
   .productoEnCarrito:hover {
       border-left: 5px solid royalblue;
   }
   
 
+main{
+  background-color: #ededed;
+}
+
+
+  .divContainer{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    /* align-content: space-around; */
+    width: auto;
+    height: auto;
+    background-color: #ededed ;
+
+  }
+
+
+
+.card-body{
+  height: 35em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 5px;
+
+  /* justify-content: space-around; */
+
+}
+
+@media  (max-width: 325px){
+  .navContenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  }
+
+@media  (max-width: 674px){
+.navContenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.option{
+  font-size: 11px ;
+}
+}
+@media  (min-width: 991px) and (max-width: 1200px){
+.card-body{
+  height: 31em;
+}
+.card-body > p{
+margin-bottom: 30px;
+}
+
+.option{
+  font-size: 10px ;
+}
+}
+@media  (min-width: 471px) and (max-width: 773px){
+.card-body{
+  height: 49em;
+}
+}
+@media  (min-width: 10px) and (max-width: 471px){
+.card-body{
+  height: 40em;
+}
+}
+
+.card-body > h5{
+  height: 10%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.card-body > p{
+  height: 10%;
+  text-align: center;
+}
+.card-body > span{
+  margin-top: 13px;
+  margin-bottom: 20px;
+  background: #000;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 50px;
+  font-size: 17px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.imagen{
+  width: 200px;
+
+}
 
   .divCard{
-    width: 5rem;
+    /* width: 5rem; */
+    width: 100%;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    max-width: 330px;
   }
+
+  .divCard:hover{
+    transform: scale(1.05);
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 4px 4px 20px rgb(27, 26, 26);
+}
 
   .btn-comprar{
     color: white;

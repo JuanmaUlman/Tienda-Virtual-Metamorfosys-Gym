@@ -24,17 +24,20 @@ const mostrarProductos = async () => {
     productos.forEach( (producto) => {
         const div = document.createElement('div')
         div.classList.add('card')
-        div.classList.add('col-md-3')
+        div.classList.add('col-sm-12')
+        div.classList.add('col-md-5')
         div.classList.add('col-lg-3')
         div.classList.add('m-3')
         div.classList.add('divCard')
+        div.classList.add('bg-ligth')
 
         div.innerHTML = `
-        <img src=${producto.img} class="card-img-top">
-        <div class="card-body">
+        <div class="card-body bg-ligth">
+        <img src=${producto.img} class="card-img-top border-bottom border-4 imagen">
             <h5 class="card-title">${producto.nombre}</h5>
             <p class="card-text">${producto.desc}</p>
-            <button id="agregarCarrito${producto.id}" class="agregar btn btn-primary me-2">Agregar al carrito</button> <span>$${producto.precio}</span>
+            <span>$${producto.precio}</span>
+            <button id="agregarCarrito${producto.id}" class="agregar btn btn-primary me-2">Agregar al carrito</button> 
         </div>
         `
 
@@ -132,7 +135,7 @@ export const actualizarCarrito = () => {
         <p>${prod.nombre}</p>
         <p>${prod.precio}</p>
         <p>Cantidad: <span id=cantidad>${prod.cantidad}</span></p>
-        <button id="eliminarDelCarrito${prod.id}"><i class="fas fa-trash-alt"></i></button>
+        <button id="eliminarDelCarrito${prod.id}"><i class="fas fa-trash-alt w-100"></i></button>
         `
         
         contenedorCarrito.appendChild(div);
