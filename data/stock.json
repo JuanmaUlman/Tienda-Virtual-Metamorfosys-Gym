@@ -247,7 +247,7 @@
         "nombre": "Protein Bar Chocolate Brownie",
         "desc": "Ena Suplemento Deportivo Protein Bar x46g Chocolate Brownie",
         "precio": 175,
-        "img": "images-proyecto/img-suplementos/28.png",
+        "img": "./images-proyecto/img-suplementos/28.png",
         "cantidad":1
     },
 
@@ -256,7 +256,7 @@
         "nombre": "Suplemento Dietario Reversal",
         "desc": "Suplemento Dietario Reversal Sport Frutos Rojos x 15 uni",
         "precio": 1977,
-        "img": "/images-proyecto/img-suplementos/29.png",
+        "img": "./images-proyecto/img-suplementos/29.png",
         "cantidad":1
     }
 
